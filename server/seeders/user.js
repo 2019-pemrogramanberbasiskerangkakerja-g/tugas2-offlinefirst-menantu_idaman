@@ -19,6 +19,6 @@ module.exports = {
                 username: 'sidqi',
                 email: 'sidqi@gmail.com',
                 password: 'Popokbayi1.'
-            }),
+            })
     }
-}
+};
