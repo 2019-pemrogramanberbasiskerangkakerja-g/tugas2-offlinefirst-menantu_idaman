@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/2019-pemrogramanberbasiskerangkakerja-g/tugas2-offlinefirst-menantu_idaman#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "jwt-login": "0.0.3",
     "pg": "^7.8.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.43.0"
