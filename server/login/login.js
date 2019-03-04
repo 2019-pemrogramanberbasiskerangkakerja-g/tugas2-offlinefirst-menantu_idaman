@@ -19,27 +19,10 @@ module.exports = {
                     if(password == result.password)
                     {
                         jwtLogin.sign(req, res, user, 'topsecret', 1, false); 
-                        // return res.status(400).send('Auth success.');   
                     }
                     else {
                         return res.status(400).send('Auth failed. Wrong password.'); 
                     }
-                    // const matches = await bcrypt.compare(password, result.password);
-                    // console.log('====================================');
-                    // console.log(result.password);
-                    // console.log('====================================');
-                    // console.log('====================================');
-                    // console.log(password);
-                    // console.log('====================================');
-                    // console.log('====================================');
-                    // console.log(matches);
-                    // console.log('====================================');
-                    // if (!matches) {
-                    //     return res.status(400).send('Auth failed. Wrong password.');   
-                    // } else {
-                    //     jwtLogin.sign(req, res, user, 'topsecret', 1, false); 
-                    //     return res.status(400).send('Auth success.');  
-                    // }
                 }
             });
     },
