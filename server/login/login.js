@@ -18,7 +18,7 @@ module.exports = {
                 } else if(result) {
                     if(password == result.password)
                     {
-                        jwtLogin.sign(req, res, user, 'topsecret', 1, false); 
+                        return res.status(200).send('Logged in'); 
                     }
                     else {
                         return res.status(400).send('Auth failed. Wrong password.'); 
