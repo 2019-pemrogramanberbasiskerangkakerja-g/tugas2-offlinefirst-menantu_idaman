@@ -11,9 +11,18 @@ app.use(express.static(__dirname + '/web'));
 
 require('./server/seeders/routes')(app);
 require('./server/login/routes')(app);
+require('./server/register/routes')(app);
 
-app.get('/', function(request, response) {
-	response.sendFile(path.join(__dirname + '/web/login/login.html'));
+app.get('/', (req, res) => res.status(200).send({
+    message: 'Welcome to menantu_idaman Server',
+}));
+
+app.get('/login', function(req, res) {
+	res.sendFile(path.join(__dirname + '/web/login/login.html'));
+});
+
+app.get('/register', function(req, res) {
+	res.sendFile(path.join(__dirname + '/web/register/register.html'));
 });
 
 const port = 1212;
